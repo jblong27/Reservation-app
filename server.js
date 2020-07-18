@@ -10,8 +10,8 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 //empty array to hold the reservations
-var reservations = []
-var waiting = []
+var reservations = [];
+var waiting = [];
 
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "./public/home.html"));
@@ -33,6 +33,20 @@ app.get("/", function(req, res) {
   app.post('/make', function(req, res) {
     var newPerson = req.body;
   });
+
+// POST function
+app.post("/tables", function(req, res) {
+
+  var newReservation = req.body;
+
+  newReservation.routeName = newReservation.name.replace(/\s+/g, "").toLowerCase();
+
+  console.log(newReservation);
+
+  reservations.push(newReservation);
+
+  res.json(newReservation);
+})
 
 app.listen(PORT, function() {
     console.log('app listening on PORT ' + PORT);
