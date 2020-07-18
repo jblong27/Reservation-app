@@ -10,19 +10,19 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 
 //empty array to hold the reservations
-var reservations = [1]
-var waiting = [2]
+var reservations = []
+var waiting = []
 
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "./public/home.html"));
   });
   
-  app.get("/make", function(req, res) {
-    res.sendFile(path.join(__dirname, "./reserve.html"));
+  app.get("/reserve", function(req, res) {
+    res.sendFile(path.join(__dirname, "./public/reserve.html"));
   });
 
-  app.get("/make", function(req, res) {
-    res.sendFile(path.join(__dirname, "./tables.html"));
+  app.get("/tables", function(req, res) {
+    res.sendFile(path.join(__dirname, "./public/tables.html"));
   });
   
   // Displays waiting list and reservations
