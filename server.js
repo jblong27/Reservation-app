@@ -14,11 +14,15 @@ var reservations = [1]
 var waiting = [2]
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "main.html"));
+    res.sendFile(path.join(__dirname, "./public/home.html"));
   });
   
   app.get("/make", function(req, res) {
-    res.sendFile(path.join(__dirname, "make.html"));
+    res.sendFile(path.join(__dirname, "./reserve.html"));
+  });
+
+  app.get("/make", function(req, res) {
+    res.sendFile(path.join(__dirname, "./tables.html"));
   });
   
   // Displays waiting list and reservations
