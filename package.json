@@ -1,0 +1,24 @@
+{
+  "name": "Reservation-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jblong27/Reservation-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jblong27/Reservation-app/issues"
+  },
+  "homepage": "https://github.com/jblong27/Reservation-app#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
